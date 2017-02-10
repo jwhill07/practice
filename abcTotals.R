@@ -6,8 +6,8 @@ source("fix_dataset.R")
 colnames(dataset1) <- gsub("data.", "", colnames(dataset1))
 
 computeABCTotal <- function() {
-  ids$abcTotals <- rowSums(ids[grep("^abc_q", colnames(ids))])
-  print(ids[c("ids", "abcTotals")])
+  dataset1$abcTotals <- rowSums(dataset1[grep("^abc_q", colnames(dataset1))])
+  print(dataset1[c("idnum", "abcTotals")])
 }
 
 computeABCTotal()
